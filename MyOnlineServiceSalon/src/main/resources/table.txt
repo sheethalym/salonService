@@ -1,0 +1,7 @@
+create database salon;
+\c salon;
+create table card(id primary key,cardName varchar(25),cardNumber varchar(25),bankName varchar(25));
+
+create table payment(paymentId primary key,type varchar(25),status varchar(25),id long REFERENCES card(id));
+
+http://localhost:8083/restapp/swagger-ui/index.html
